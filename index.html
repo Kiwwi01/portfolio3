@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Quentin Lombard</title>
+
+    <!-- Google Fonts -->
+    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap)" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0f0f10;
+            --bg-light: #1a1a1d;
+            --text: #e6e6e6;
+            --primary: #ff7f11;
+            --secondary: #ffb347;
+            --card: #161618;
+            --radius: 18px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        /* HEADER */
+        header {
+            padding: 100px 15%;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 55px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 20px;
+            opacity: 0.7;
+            margin-top: 10px;
+        }
+
+        /* NAV */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(15, 15, 16, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--text);
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 15%;
+        }
+
+        section h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* CARDS */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 25px rgba(255,127,17,0.25);
+        }
+
+        /* COMPETENCES */
+        .competence-card {
+            text-align: center;
+            padding: 25px;
+            border-radius: var(--radius);
+            background: var(--card);
+            transition: 0.3s;
+        }
+
+        .competence-card img {
+            width: 65px;
+            margin-bottom: 15px;
+        }
+
+        /* TIMELINE */
+        .timeline-card {
+            padding: 30px;
+            border-radius: var(--radius);
+            background: var(--card);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary);
+        }
+
+        .tag {
+            background: var(--primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            color: black;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: var(--bg-light);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>Quentin Lombard</h1>
+    <p>Développeur Web • Étudiant BTS SIO SLAM</p>
+</header>
+
+<!-- NAV -->
+<nav>
+    <a href="#apropos">À propos</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#competences">Compétences</a>
+    <a href="#formations">Formations</a>
+    <a href="#experiences">Expériences</a>
+</nav>
+
+<!-- APROPOS -->
+<section id="apropos">
+    <h2>À propos</h2>
+    <p style="text-align:center; max-width:800px; margin:auto; opacity:0.8;">
+        Je suis Quentin Lombard, étudiant en BTS SIO option SLAM au Lycée Jean Mermoz.
+        Passionné par le développement web, la création de solutions modernes et les outils d’automatisation.
+        J’aime concevoir des interfaces propres, efficaces et centrées utilisateur.
+    </p>
+
+    <br><br>
+    <p style="text-align:center;">
+        <strong>Téléphone :</strong> 07 69 73 53 53<br>
+        <strong>Email :</strong> lombardquentin01@gmail.com
+    </p>
+</section>
+
+<!-- REALISATIONS -->
+<section id="realisations">
+    <h2>Réalisations</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Site web PHP/CSS</h3>
+            <p>
+                Développement d’un site dynamique avec formulaires, pages générées côté serveur 
+                et gestion de contenu simple.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Workflows d’automatisation via n8n</h3>
+            <p>
+                Automatisation de tâches internes, gestion d’API, traitement automatisé de données, 
+                optimisation des processus.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- COMPETENCES -->
+<section id="competences">
+    <h2>Compétences techniques</h2>
+
+    <div class="grid">
+
+        <div class="competence-card">
+            <img src="img/html.jpg">
+            <p>HTML</p>
+        </div>
+
+        <div class="competence-card">
+            <img src="img/css.png">
+            <p>CSS</p>
+        </div>
+
+        <div class="competence-card">
+            <img src="img/JavaScript-logo.png">
+            <p>JavaScript</p>
+        </div>
+
+        <div class="competence-card">
+            <img src="img/php.png">
+            <p>PHP</p>
+        </div>
+
+        <div class="competence-card">
+            <img src="img/Csharp.webp">
+            <p>C#</p>
+        </div>
+        
+        <div class="competence-card">
+            <img src="img/python.webp">
+            <p>Python</p>
+        </div>        
+
+
+
+    </div>
+</section>
+
+<!-- FORMATIONS -->
+<section id="formations">
+    <h2>Formations</h2>
+
+    <div class="timeline-card">
+        <span class="tag">2024 – Aujourd’hui</span>
+        <h3>BTS SIO option SLAM – Lycée Jean Mermoz</h3>
+        <p>
+            Développement d’applications web, gestion de bases de données, projets logiciels.
+        </p>
+    </div>
+
+    <div class="timeline-card">
+        <span class="tag">2021 – 2024</span>
+        <h3>Bac Pro SN RISC – Lycée Champollion</h3>
+        <p>
+            Réseaux, systèmes, sécurité informatique, maintenance et infrastructures.
+        </p>
+    </div>
+</section>
+
+<!-- EXPERIENCES -->
+<section id="experiences">
+    <h2>Expériences professionnelles</h2>
+
+    <div class="timeline-card">
+        <span class="tag">Juin 2025</span>
+        <h3>Développeur Web – Rowdeo Agency</h3>
+        <p>
+            Création d’un site vitrine professionnel et réalisation d’un plan du site sous Figma.
+        </p>
+    </div>
+
+    <div class="timeline-card">
+        <span class="tag">Mars – Avril 2026</span>
+        <h3>Automatisation – CyberyWeb</h3>
+        <p>
+            Développement d’automatisations via n8n pour améliorer les flux internes et réduire les tâches manuelles.
+        </p>
+    </div>
+</section>
+
+<footer>
+    © Quentin Lombard – 2026
+</footer>
+
+</body>
+</html>
